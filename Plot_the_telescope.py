@@ -3,12 +3,35 @@ from mpl_toolkits import mplot3d
 from mpl_toolkits.mplot3d import Axes3D
 from matplotlib.patches import Circle
 import mpl_toolkits.mplot3d.art3d as art3d
+<<<<<<< HEAD
+=======
+import numpy as np
+import pandas as pd
+
+
+
+def x_y_in_double_focus_distance (x0, y0, z0, x1, y1, z1, z2):
+    return [(z2-z0)*(x1 - x0)/(z1 - z0) + x0, (z2-z0)*(y1 - y0)/(z1 - z0) + y0]
+t = pd.read_csv('/home/yaroslav/Yaroslavus_GitHub/IACT_workshop_experiments/Summary_table.csv',
+                       sep=' ', names=['number_kb','x_kb','y_kb', 'z_kb', 'alpha_YZ_kb', 'beta_XZ_kb', 'x_dev_exp', 'y_dev_exp', 'f_exp', 'f_kb', 'fix_angle'])
+t_df = pd.DataFrame(t)
+xy_new = []
+for i in range (len(t["number_kb"])):
+    xy_new.append(x_y_in_double_focus_distance(t['x_kb'][i], t['y_kb'][i], t['z_kb'][i], t["x_dev_exp"][i], t["y_dev_exp"][i], t['f_kb'][i], 2*t['f_kb'][i]))
+xy_new_df = pd.DataFrame(xy_new)
+
+
+>>>>>>> master
 
 #########################################################################################################
 ## Setting the plot options ##
 #############################
 
+<<<<<<< HEAD
 fig = plt.figure(figsize=(100,100))
+=======
+fig = plt.figure(figsize=(200,200))
+>>>>>>> master
 ax = plt.axes(projection="3d")
 
 ## Axes labels and the title ##
@@ -129,7 +152,12 @@ for g in range (len(t_df["number_kb"])):
 ## File saving ##
 ################
 
+<<<<<<< HEAD
 #plt.savefig('try', fmt='png')
 #plt.savefig('try', fmt='pdf')
+=======
+plt.savefig('try', fmt='png')
+plt.savefig('try', fmt='pdf')
+>>>>>>> master
 
 plt.show()
