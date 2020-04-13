@@ -4,7 +4,10 @@ from mpl_toolkits.mplot3d import Axes3D
 from matplotlib.patches import Circle
 import mpl_toolkits.mplot3d.art3d as art3d
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> master
 import numpy as np
 import pandas as pd
 
@@ -21,6 +24,9 @@ for i in range (len(t["number_kb"])):
 xy_new_df = pd.DataFrame(xy_new)
 
 
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 
 #########################################################################################################
@@ -28,7 +34,11 @@ xy_new_df = pd.DataFrame(xy_new)
 #############################
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 fig = plt.figure(figsize=(100,100))
+=======
+fig = plt.figure(figsize=(200,200))
+>>>>>>> master
 =======
 fig = plt.figure(figsize=(200,200))
 >>>>>>> master
@@ -153,8 +163,13 @@ for g in range (len(t_df["number_kb"])):
 ################
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #plt.savefig('try', fmt='png')
 #plt.savefig('try', fmt='pdf')
+=======
+plt.savefig('try', fmt='png')
+plt.savefig('try', fmt='pdf')
+>>>>>>> master
 =======
 plt.savefig('try', fmt='png')
 plt.savefig('try', fmt='pdf')
